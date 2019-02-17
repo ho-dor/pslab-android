@@ -58,6 +58,10 @@ public class DataLoggerActivity extends AppCompatActivity {
                 getSupportActionBar().setTitle(caller);
                 categoryData = LocalDataLog.with().getTypeOfSensorBlocks(getString(R.string.baro_meter));
                 break;
+            case "Accelerometer":
+                getSupportActionBar().setTitle(caller);
+                categoryData = LocalDataLog.with().getTypeOfSensorBlocks(getString(R.string.accelerometer));
+                break;
             default:
                 categoryData = LocalDataLog.with().getAllSensorBlocks();
                 getSupportActionBar().setTitle(getString(R.string.logged_data));
