@@ -1083,6 +1083,7 @@
     <string name="lux_meter">Lux Meter</string>
     <string name="log_saved_directory">Log saved in\n</string>
     <string name="log_saved_failed">Could not save the log. Please check storage permission.</string>
+    <string name="no_sensor_message">Recording is disabled as required sensor is not present in device</string>
     <string name="open">Open</string>
     <string name="play">Play</string>
     <string name="lux_meter_intro">\u2022 The Lux meter can be used to measure the ambient light intensity. This instruments

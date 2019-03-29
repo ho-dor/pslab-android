@@ -300,7 +300,12 @@ public abstract class PSLabSensor extends AppCompatActivity {
              */
             case R.id.record_data:
                 if (!isRecording) {
-                    dataRecordingCycle();
+                    if(getSensorFragment() instanceof LuxMeterDataFragment){
+                        item.setEnabled(false);
+                        Toast.makeText(this, R.string.no_sensor_message, Toast.LENGTH_SHORT).show();
+                    }else {
+                        dataRecordingCycle();
+                    }
                 } else {
                     stopRecordSensorData();
                     displayLogLocationOnSnackBar();
@@ -379,7 +384,6 @@ public abstract class PSLabSensor extends AppCompatActivity {
     }
 
     private void dataRecordingCycle() {
-        if()
         if (psLabPermission.checkPermissions(PSLabSensor.this, PSLabPermission.LOG_PERMISSION)) {
             if (locationEnabled) {
                 if (psLabPermission.checkPermissions(PSLabSensor.this, PSLabPermission.GPS_PERMISSION)) {
